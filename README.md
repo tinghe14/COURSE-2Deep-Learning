@@ -1,2 +1,15 @@
 # COURSE-2Deep-Learning
-2nd Year PhD Course at 2022 Spring
+
+This course foucus on:
+- basic theoretical and methodological underpinnings of machine learning
+- commonly used architecture for Deep Learning
+- current challenges such as ethics and fairness
+- specilized applications such as computer vision
+
+# Assignment
+
+My Python code for 2022 spring Deep Learning course and [study notes]() for better understand the material and build knowledge graph.
+
+Theoretical Homeworks Completed for the Class:
+
+Coding Assignments Completed at Class:
