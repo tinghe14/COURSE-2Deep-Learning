@@ -35,7 +35,43 @@ MLP(Multi-layer neural network)
 - can model arbitrary boolean functions
 - can model arbirtrarily complex decision boundaries
 - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/MLP%20fit%20any%20decision%20boundaries.png)
-
+- can model a circle at any location
+  - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/large%20number%20of%20neuron%20can%20fire%20circle%20at%20any%20location.png)
+- can combine with any other cicle
+  - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/adding%20circles.png)
+- **conclusion:one-hidden layer MLP can model any classification boundary** 
+  -![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/one%20hidden%20layer%20can%20model%20any%20classification%20boundary.png)
+image classification problem:
+- first layer must capture relevant patterns
+  - input layer: feature detectors and network is function over detectors
+- higer level neuron compose complex templates
+- shifted unseen new pic
+  - conventional MLPs are sensitive to location, but often the location of a pattern is not important
+    - shift invariance: scanning for patterns
+      - instead of passing a whole image into a MLP, we can slide a smaller MLP over the image
+      - we can use different MLPs (with different parameters) for every location or, we can share parameters across the spatial doamin(translation invariance)
+how:
+- overall plot:
+  - ![overall plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/overall%20convolutional%20NN.png)
+- convolution layer: ConvNet is a sequence of convolution layers interspersed with activation functions
+  - for a image, we use a filter(the same full depth of the input volume) to filter with the image (slide over the image spatially)
+    - repeats it several times(since many neuro in one hidden layers)
+      - get an activation maps once after a filter slided over the image
+        - we also can repeat it several times
+          - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/illstruation%20of%20ConvNet.png)
+          - one filter generate one activation map
+            - caculation of size of activation map (filtering with filter F):
+              - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/size%20of%20activation%20map.png)
+              - common to zero pad the border: (pad with 1 pixel border): (N+2 - F)/stride + 1
+          - remeber that after applying filter the activation maps shrink their size
+            - too fast is not good
+   - pooling layer:
+    - makes the representations smaller and more manageable
+    - operates over each activation map independently
+      - ![illustration plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/pooling%20layer.png)
+      - max polling
+        - ![illustration plot for max pooling](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/max%20pooling.png)
+  
 ## M4: Training Neural Networks
 ### L7: Training Part I: Activation, Initialization, Preproc, Dropout, Batch norm
 ### L8: Training Part II: Updates & Momentum, Augmentation, Transfer Learning
