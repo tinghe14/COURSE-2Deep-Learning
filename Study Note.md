@@ -23,16 +23,32 @@ Motivation for NN:
     - [ref](https://towardsdatascience.com/what-is-adversarial-machine-learning-dbe7110433d6)
 
 ## M2: Basics
+### L3: Basics Part: Regularization and Optimization
+### L4: Computational Graph and Backpropagation Part 1
 
 ## M3: Convolutional Neural Networks
+### L5: History of and Introduction to Neural Networks
+### L6: Convolutional Neural Networks
+activation function:
+- ![choice](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/choice%20of%20activation%20function.png)
+MLP(Multi-layer neural network)
+- can model arbitrary boolean functions
+- can model arbirtrarily complex decision boundaries
+- ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/MLP%20fit%20any%20decision%20boundaries.png)
 
 ## M4: Training Neural Networks
+### L7: Training Part I: Activation, Initialization, Preproc, Dropout, Batch norm
+### L8: Training Part II: Updates & Momentum, Augmentation, Transfer Learning
 
-## M5: Architectures
+## M5: Architectures (Feb 21)
+### L9: Inverse Classroom
+### L10: Network Architectures: AlexNet, VGG, ResNet, U-Net, ...
 
-## M6: Architectures (con't)
+## M6: Architectures (con't)(Feb 28)
+### L11: Inverse Classroom
 
-## M7: Sequence Modeling
+## M7: Sequence Modeling (Mar 07)
+### L12: RNNs and LSTM
 
 ## M8: Unsupervised Learning
 
