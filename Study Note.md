@@ -71,6 +71,13 @@ how:
       - ![illustration plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/pooling%20layer.png)
       - max polling
         - ![illustration plot for max pooling](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/max%20pooling.png)
+  - fully connected layer (FC layer)
+    - contains neurons that connect to the entire input volume, as in ordinary neural networks
+- summary:
+  - convNets stack contains: convolutional layers, pooling layers, fully connected layers
+  - trend towrds smaller filters and deeper architectures
+  - typical architecture:
+    -![plot of summarized architecture](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/convNetS%20architecture.png)
   
 ## M4: Training Neural Networks
 ### L7: Training Part I: Activation, Initialization, Preproc, Dropout, Batch norm
