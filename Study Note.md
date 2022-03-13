@@ -84,6 +84,7 @@ Backpropagation
 ### L6: Convolutional Neural Networks
 activation function:
 - ![choice](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/choice%20of%20activation%20function.png)
+
 MLP(Multi-layer neural network)
 - can model arbitrary boolean functions
 - can model arbirtrarily complex decision boundaries
@@ -94,6 +95,7 @@ MLP(Multi-layer neural network)
   - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/adding%20circles.png)
 - **conclusion:one-hidden layer MLP can model any classification boundary** 
   -![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/one%20hidden%20layer%20can%20model%20any%20classification%20boundary.png)
+
 image classification problem:
 - first layer must capture relevant patterns
   - input layer: feature detectors and network is function over detectors
@@ -103,6 +105,7 @@ image classification problem:
     - shift invariance: scanning for patterns
       - instead of passing a whole image into a MLP, we can slide a smaller MLP over the image
       - we can use different MLPs (with different parameters) for every location or, we can share parameters across the spatial doamin(translation invariance)
+
 how:
 - overall plot:
   - ![overall plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/overall%20convolutional%20NN.png)
