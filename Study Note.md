@@ -25,6 +25,7 @@ Motivation for NN:
 ## M2: Basics
 ### L3: Basics Part: Regularization and Optimization
 ### L4: Computational Graph and Backpropagation Part 1
+
 SVM loss:
 - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/SVM%20loss%20plot.png)
 - ![example](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/SVM%20loss%20example.png)
@@ -38,6 +39,7 @@ Summary from last lectures:
   - two questions for today's lecture:
     - are good parameters unique?
     - how to get parameters that make us happy?
+
 Regularization
 - ![loss function with regulairzation term](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/loss%20function%20add%20regularization.png)
   - data loss
@@ -49,6 +51,7 @@ Regularization
       - dropout
       - batch normalization
       - stochastic depth ...
+
 Optimization
 - a target loss function in its full glory defining our preferred solution. How do we actually retrieve this solution?
   - the analytic approach: express derivatve, set to zero and find solutions
@@ -65,9 +68,17 @@ Optimization
               - % data_batch = sample_training_data(data, batch__size)
               - % gradient = eval_gradient(loss, data_batch, weights)
               - % weights += -step_size * gradient
+
 How to make a comments on the error:
 - dataset design: split data into train, validation, and test; hyperparameters chosen on validation, then evaluated on test
 
+Computational Graphs:
+- it helps us compute derivatives at arbitrary locations
+  - complex expressions are broken down into easy functions
+  - forward pass: evaluate expression
+  - backward pass: recursive application of chain rule yeilds analytic gradients
+
+Backpropagation
 ## M3: Convolutional Neural Networks
 ### L5: History of and Introduction to Neural Networks
 ### L6: Convolutional Neural Networks
