@@ -25,6 +25,48 @@ Motivation for NN:
 ## M2: Basics
 ### L3: Basics Part: Regularization and Optimization
 ### L4: Computational Graph and Backpropagation Part 1
+SVM loss:
+- ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/SVM%20loss%20plot.png)
+- ![example](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/SVM%20loss%20example.png)
+Softmax Loss:(multinomial logistic regression)
+-![example](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/softmax%20loss%20example.png)
+Summary from last lectures:
+- quantify unhappiness with current model parameters:
+  - SVM loss
+  - softmax function and MLE:
+    - such as: Kullback-Leibler divergence
+  - two questions for today's lecture:
+    - are good parameters unique?
+    - how to get parameters that make us happy?
+Regularization
+- ![loss function with regulairzation term](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/loss%20function%20add%20regularization.png)
+  - data loss
+  - regularization: introduce preferences on weights
+    - counteract overfitting by enforcing simpler models 抵消
+    - aid optimization by shaping the loss function (adding curvature) 曲率
+    - ![l1 l2 regularization](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/L1%20L2%20regularization.png)
+    - more complex regularizers:
+      - dropout
+      - batch normalization
+      - stochastic depth ...
+Optimization
+- a target loss function in its full glory defining our preferred solution. How do we actually retrieve this solution?
+  - the analytic approach: express derivatve, set to zero and find solutions
+  - but it not possible in most cases since many local minimum points
+    - gradient descent algorithm:
+      - % while not_converged:
+        - % gradient = eval_gradient(loss, data, weights)
+        - % weights += - step_size * gradient (step_size is hyperparametrs)
+          - too large step size can cause divergence
+          - number of samples can be large
+            - stochastic gradient descent: approximate sum over all samples by a sum over a much smaller minibatch
+            - stochastic gradient descent algorithm:
+            - % while not_converged:
+              - % data_batch = sample_training_data(data, batch__size)
+              - % gradient = eval_gradient(loss, data_batch, weights)
+              - % weights += -step_size * gradient
+How to make a comments on the error:
+- dataset design: split data into train, validation, and test; hyperparameters chosen on validation, then evaluated on test
 
 ## M3: Convolutional Neural Networks
 ### L5: History of and Introduction to Neural Networks
