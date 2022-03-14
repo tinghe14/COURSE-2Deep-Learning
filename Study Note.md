@@ -154,6 +154,62 @@ Connecting the dots:
     - update parameters using gradient
 
 Activation
+- [choice of activation function](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/choice%20of%20activation%20function.png)
+- sigmoid:
+  - introduction: 
+      - squashes input into [0,1]
+      - saturating firing rate of a neuron
+  - problems: 
+    - gradient vanishes for saturated neurons
+    - exp() computation is a bit expensive
+    - outputs are not zero-centered [0,1]:
+      - for here: what if all inputs are positive, gradients on w, show that local gradient is x -> all positive
+        - which means gradient is either all positive or all negative
+        - so we want zero-mean data
+- tanh:
+  - introduction: 
+    - squashes input into [-1,1]
+    - zero-centered output
+  - problem:
+    - gradient vanished for saturated neurons
+ - ReLU: max(0,x)
+  - introduction:
+    - no saturation in positive regime
+    - computationally efficient
+    - converges much faster than previous functions
+    - closer to biological neuron activation
+  - problem:
+    - not zero-centered
+    - dead ReLU: will never actiave for some data (active ReLu: will activate for some of the data)
+      - bias term to rescue: initialize with small psotive bias
+- Leaky ReLU:
+  - introduction:
+    - no saturation
+    - computationally efficient
+    - converges much faster than previous
+    - will not die
+- exponential linear Unit
+  - introduction:
+    - benefits of ReLU
+    - closer to zero mean
+    - saturates in negative regime (noise-robust deactivation state)
+  - problem:
+    - exp() is a bit expensitive to compute
+- summary:
+  - start with ReLU
+  - try leaky ReLU, PReLU, ELU, maybe even maxout  
+  - try tanh if you have time
+  - do not use sigmoid
+  - be careful with learning rates
+
+Initlization:
+- where are we now:
+  - architecture is decided (number of neurons, actiavtion functions)
+  - close to start training
+  - but where should we start, how do we initilize our weights/parameters
+- weight initlization
+  - Xavier initilization:  small random numbers with zero mean and well-defined standard deviation
+    - works well but breaks with ReLU: because derivation is based on linear neuron assumption. After Xavier intialization, outputs will be in the linear regime for tanh and sigmoid but obviously not for ReLU,
 
 ## M5: Architectures (Feb 21)
 ### L9: Inverse Classroom
