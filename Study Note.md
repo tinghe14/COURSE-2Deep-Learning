@@ -139,6 +139,22 @@ how:
 ### L7: Training Part I: Activation, Initialization, Preproc, Dropout, Batch norm
 ### L8: Training Part II: Updates & Momentum, Augmentation, Transfer Learning
 
+Reminder:
+- Convolutional Neural Networks (ConvNets) stack: convolutional layers, pooling layers, fully connected layers
+  - typical architecture: [(Conv -> Activation)*N -> Pool]*M -> (FC -> Activation)*F, Softmax
+- Today will consider important for training: design choices + potential pitfalls
+
+Connecting the dots:
+- computational graphs: consecutively apply chain rule
+- convolutional neural networks: same concept still applies + more complicated with shared weights
+  - apply batched SGD: until not converged, do:
+    - sample batch of data
+    - forward prop through graph, compute loss
+    - backward prop to compute gradients
+    - update parameters using gradient
+
+Activation
+
 ## M5: Architectures (Feb 21)
 ### L9: Inverse Classroom
 ### L10: Network Architectures: AlexNet, VGG, ResNet, U-Net, ...
