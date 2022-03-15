@@ -210,7 +210,36 @@ Initlization:
 - weight initlization
   - Xavier initilization:  small random numbers with zero mean and well-defined standard deviation
     - works well but breaks with ReLU: because derivation is based on linear neuron assumption. After Xavier intialization, outputs will be in the linear regime for tanh and sigmoid but obviously not for ReLU,
+  - He initilization: similar but a little difference in standard deviation
+  - have a good initlization will speed up your work
 
+Preprocessing:
+- reminder of the sigmoid or ReLU problem: if all inputs are positibe, gradients on w shows that gradients is either all positive or all negative. this is ineffective updates
+  - why this is a problem in image field? because the range of 'normal' image is [0,255]
+  - solution:for images, mean centering(zero-center) can be sufficient (normalizaiton not necessary)
+    - do not (necessarily) consider decorrelation, whitening or other techniques for images, but his may be different for other input data
+    - attention: at inference time, apply the same transformation (eg mean substraction) with values extracted from the training data (always think about not leaking the information from your validation set)
+
+Covariates shift and batch norm:
+- covariate shifts: 
+  - background: randomly sampling mini-batches: training assumes similar distribution
+    - in practice (and although random), each mini-batch will have different distribution which cause covariate shift can happen in each layer
+    - shifts can be large and can negatively affect training
+      - we can eliminate covariate shift by 'moving' batches to zero mean and unit standard deviation
+      - then, move entire collection to desirable location: batch normalization
+        - rather than pre-conditioning data and hoping that nice properties are preserved, at each layer we re-condition during every forward pass
+          - usually inserted right after fully connected or convolutional layers, right before activation
+          - however, is unit gaussian activation necessarily what we want?
+            - consider tanh or sigmoid activation:
+              - batch normalization will limit the activation to the linear regim of these activation functions
+                - in such case, negatively affects performance
+                - there are other cases where you also would not want batch normalization, eg when magnitude matters
+        - benefits of batch normalization:
+          - improves gradient flow through networks and allows for higher learning rates
+          - reduces strong dependence on initlization
+          -  acts as regularization
+        - what to do at testing time:
+          - compute average mean and standard deviation across multiple batches, the nsave these values for inference 
 ## M5: Architectures (Feb 21)
 ### L9: Inverse Classroom
 ### L10: Network Architectures: AlexNet, VGG, ResNet, U-Net, ...
