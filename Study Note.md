@@ -1,5 +1,11 @@
 # Study Note
-
+Learning objectives:
+- understand neural networks
+- know the terminology of machine and deep learning
+- comprehend the architectures mentioned in the lecture
+- fearlessly design, build, train networks, and reason about pitfalls and design choices
+- gain intuition
+- 
 ## M1: Introduction and Basics
 Motivation for NN:
 - template assumption on pixel level is strong and we need some form of abstraction (features)
