@@ -17,7 +17,7 @@ Advanced concepts:
 - unsupervised and self-supervised learning
 - challenges(generlization, bias, ethics, ...)
 - applications in cv and medicine
-- 
+
 # Assignment
 
 My Python code for 2022 spring Deep Learning course and [study notes](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Study%20Note.md) for better understand the material and build knowledge graph.
