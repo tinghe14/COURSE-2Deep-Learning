@@ -22,7 +22,7 @@ Motivation for NN:
     - add some penalty when it is not assigned with correct class, otherwise, the loss function is zero
 - for classfication, we want to intrepet scores as probability : softmax function $P(Y=k|X=xi) = (e^s)k / \sum (e^s)j$
     - multinomial logistic regression
-    - softmax loss: -log P, log-likelihood of true class
+    - softmax loss: -log P, log-likelihood of true class (logistic regression: sigmoid, softmax gives uou essentially a multi normal extension of the sigmoid function)
 - Other:
   - Adversarial learning: techniques to deal with following problems:
     - poisoning: manipulate the data before it is used for training
@@ -59,6 +59,7 @@ Regularization
       - dropout
       - batch normalization
       - stochastic depth ...
+hyperparameter: you can run a grid searchg overall possible hyperparameters, you simply evaluate your predictive performance and at the end you select for the one works well.
 
 Optimization
 - a target loss function in its full glory defining our preferred solution. How do we actually retrieve this solution?
