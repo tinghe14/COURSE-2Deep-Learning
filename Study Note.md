@@ -5,7 +5,7 @@ Learning objectives:
 - comprehend the architectures mentioned in the lecture
 - fearlessly design, build, train networks, and reason about pitfalls and design choices
 - gain intuition
-- 
+
 ## M1: Introduction and Basics
 Motivation for NN:
 - template assumption on pixel level is strong and we need some form of abstraction (features)
@@ -20,7 +20,9 @@ Motivation for NN:
   - SVM loss: (linear classifier)
     - maximum margin at decision boundary
     - add some penalty when it is not assigned with correct class, otherwise, the loss function is zero
-- for classfication, we want to intrepet scores as probability : softmax function
+- for classfication, we want to intrepet scores as probability : softmax function $P(Y=k|X=xi) = (e^s)k / \sum (e^s)j$
+    - multinomial logistic regression
+    - softmax loss: -log P, log-likelihood of true class
 - Other:
   - Adversarial learning: techniques to deal with following problems:
     - poisoning: manipulate the data before it is used for training
