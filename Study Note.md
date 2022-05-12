@@ -34,6 +34,14 @@ Motivation for NN:
 ### L3: Basics Part: Regularization and Optimization
 ### L4: Computational Graph and Backpropagation Part 1
 
+over-fitting: the performance reduced from training data to same level of testing data since training dataset over explain the variation 
+
+dataset design:
+- parameter optimized via training stage
+- twick hyperparmater during validation stage such as using different architecture(add activation)which won't be able to learn during training stage
+- show the preformance in test dataset(if directly use validation set, it will get a over optimistic estimates)
+- ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/dataset%20design.png)
+
 SVM loss:
 - ![plot](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/SVM%20loss%20plot.png)
 - ![example](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Plots%20in%20Study%20Notes/SVM%20loss%20example.png)
