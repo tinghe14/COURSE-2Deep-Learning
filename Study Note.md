@@ -32,6 +32,20 @@ Motivation for NN:
 
 ## M2: Basics
 ### L3: Basics Part: Regularization and Optimization
+
+Regularization:
+- simple way: 
+  - L2 penalty: add penalty on weight magnitude
+  - L1 penalty: encourage sparsity on solution
+
+Double Descent:
+- bias variance tradeoff (y-axis: error of model, x-axis: number of parameters/capacity of model)
+- as we increase the model caplaxity beyond interpolation threshold point our test error actually decrease again
+- You started with a model that doesn't give sensible predictions because all the weights that you have put there in the very beginning are random numbers. So essentially the capacity of the model zero because it is can't really do anything sensible. As you start optimizing , you update your parameters , and some of your parameters start to make sensible decision and essentially increase the capacity of the models as yo u iterate right at some point. 
+  - key note want you to understand: not all of the parameters that you have in such a deep model later on will actually contribute to meaningful insurance, most of what you have there will essentially only contribute some noise in the background.
+
+Optimization:
+
 ### L4: Computational Graph and Backpropagation Part 1
 
 over-fitting: the performance reduced from training data to same level of testing data since training dataset over explain the variation 
