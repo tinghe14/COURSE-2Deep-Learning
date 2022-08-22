@@ -22,6 +22,6 @@ Advanced concepts:
 
 My Python code for 2022 spring Deep Learning course and [study notes](https://github.com/tinghe14/COURSE-2Deep-Learning/blob/main/Study%20Note.md) for better understand the material and build knowledge graph.
 
-Theoretical Homeworks Completed for the Class:
+# Final Project
 
-Coding Assignments Completed at Class:
+[Unsupervised 3D MRI Brain Tumor Segmentation](https://github.com/tinghe14/COURSE-2Deep-Learning/tree/main/Final%20Project)
